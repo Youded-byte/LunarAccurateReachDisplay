@@ -7,7 +7,7 @@ sourceCompatibility = 16
 targetCompatibility = 16
 
 group 'me.youded'
-version '1.0'
+version '1.2'
 
 repositories {
     mavenCentral()

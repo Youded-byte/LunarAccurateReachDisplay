@@ -25,12 +25,12 @@ public class Transformer implements ClassFileTransformer {
             return new byte[0];
         }
 
-        if (!className.startsWith("lunar/")) {
+        if (!className.startsWith("com/moonsworth/lunar/")) {
             return classfileBuffer;
         }
 
         ClassReader cr = new ClassReader(classfileBuffer);
-        if (cr.getInterfaces().length == 0 && cr.getSuperName().startsWith("lunar/")) {
+        if (cr.getInterfaces().length == 0 && cr.getSuperName().startsWith("com/moonsworth/lunar/")) {
             ClassNode cn = new ClassNode();
 
             cr.accept(cn, 0);
